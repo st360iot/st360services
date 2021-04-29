@@ -56,16 +56,15 @@ services:
 
     volumes:
       - vol-emqx-data:/opt/emqx/data
-    #   - vol-emqx-etc:/opt/emqx/etc
       - vol-emqx-log:/opt/emqx/log
-      -             :/app/index.js
-    #
+    
+
 
     links:
       - mongo
 
     extra_hosts:
-      - "localhost:192.168.0.6"
+      - "localhost:192.168.1.240"
 
     environment:
       EMQX_NAME: ioticos-gl
